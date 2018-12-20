@@ -1,0 +1,89 @@
+
+
+header {
+    max-width: 100%;
+    height: auto;
+    background: url(http://www.jqueryscript.net/images/bg-header.jpg) top center no-repeat;
+ 
+}
+
+#conter {
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+.align-center,.align-center-f {
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+
+
+.align-center nav {
+  height: 40px;
+  margin-left:3px;
+  margin-right:3px;
+  text-align: center;
+  margin-top: 22px;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  text-shadow: 1px 1px #333;
+  background-color: #4878a0;
+  -moz-box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+.align-center nav ul li {
+  display: inline-block;
+  zoom: 1;
+
+  line-height: 40px;
+  padding: 0 20px;
+}
+
+li, ul {
+  list-style: none;
+}
+
+
+
+
+.align-center nav ul li a {
+  color: #fff;
+font-family:droid arabic kufi;}
+#container {
+  background: #FFF;
+  -moz-box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  
+  margin-left:3px;
+  margin-right:3px;
+  margin-top:-16px;
+
+}
+#jugas_footer {
+background: #13253a;
+color: #BABABA;
+font-family: 'Lato', sans-serif;
+font-weight: 400;
+padding: 3px 3px;
+}
+.copy-container {
+margin: 0 auto;
+overflow: hidden;
+}
+.jugas_footer_copyright a {
+color: #f4f4f4;
+}
+.jugas_footer_copyright {
+text-align: left;
+display:inline-block;
+line-height: 30px;
+}

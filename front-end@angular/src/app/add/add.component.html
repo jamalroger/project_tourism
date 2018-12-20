@@ -1,0 +1,78 @@
+<form method="post" enctype="multipart/form-data" action="/setSite/">
+<input type='hidden' name='csrfmiddlewaretoken' value='{{token.csrf}}'/>
+<div style="margin:15px;border-right: 1px solid #eee;padding : 15px">
+   <div style="font-size:15px;border-bottom: 1px solid #eee">
+     <h3> Add new site </h3>
+    </div><div style="float: left">
+
+   <label>Place name </label><br/>
+   <input type="text" name="place"><br/>
+   <label> description generale  </label><br/>
+   <textarea name="des"  style="width:378px;height:125px"> </textarea><br/>
+  </div>
+<div style="margin:15px;float: right;">            
+<label> <span class="btn btn-primary"  (click)="addImg()">+ Photos</span></label><br/>
+
+<div id="fileimg" style="margin:15px;border-bottom: 1px solid #eee;"> 
+     <label> Image :</label>
+     <input name="myfiles" type="file"> 
+      <br/> 
+      <label>Description of image </label>  <br/>
+     <textarea name="desImg" placeholder="text" style=" height: 37px; width: 390px "> </textarea> 
+</div> 
+  
+</div>
+
+
+
+
+</div>
+<div style="clear:both"></div>
+<div style="text-align:center">
+    <input type="submit" style="text-align: center;width: 379px;" class="btn btn-primary" name="submit" value="submit">
+</div>
+</form>
+<div style="padding:5px">
+   <div *ngFor="let i of data | paginate: { itemsPerPage: 10, currentPage: p }" style="border-bottom: 1px solid #eee;">
+ 
+     <h1>{{i.place}}</h1>
+
+     <img style="float:left;margin: 5px;" src="http://localhost:8000{{i.img[0].url}}" max-width="100%">
+     <p>{{i.des}}</p>
+     <a (click)="addToSlide(i.place,i.img)" data-toggle="modal" data-target="#Modal"> Afiicher Pleusieur images</a> 
+    <div style="clear:both"></div>
+   </div>
+        <div style="text-align: center">       <pagination-controls (pageChange)="p = $event"></pagination-controls> </div>  
+ 
+ 
+ 
+ 
+ 
+   <div id="Modal" class="modal fade" role="dialog">
+     <div class="modal-dialog modal-lg">
+   
+       <!-- Modal content-->
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+           <h4 class="modal-title">{{place}}</h4>
+         </div>
+         <div class="modal-body">
+                   <div *ngFor="let j of img;">
+                        <img style="float:left;margin: 5px;" src="http://localhost:8000{{j.url}}" max-width="100%">
+                        <p>{{j.des}}</p>
+                        <div style="clear: both"></div>
+                        <hr/>
+                   </div>
+ 
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+       </div>
+   
+     </div>
+   </div>
+ 
+ </div>
+
